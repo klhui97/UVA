@@ -14,7 +14,7 @@ int main() {
         
         while (nRecord != 0) {
             cin >> month >> rate;
-            for (int i = month; i < 101; i++)
+            for (int i = month; i < duration; i++)
                 deprecations[i] = rate;
             nRecord--;
         }
