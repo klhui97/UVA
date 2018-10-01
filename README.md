@@ -1,6 +1,11 @@
-### ACM Tips
+## ACM Tips
 
-#### Improve cin, cout speed
+#### String
+### Get empty line string
+```
+getline(cin, line);
+```
+### Improve cin, cout speed
 ```
 cin.sync_with_stdio(false);
 cin.tie(0);
