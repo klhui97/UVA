@@ -1,13 +1,17 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
-int compare (const void * a, const void * b) {
-    return ( *(int*)a - *(int*)b );
+bool compare (const int &a, const int &b) {
+    return a < b;
 }
 
 int main()
 {
+    cin.sync_with_stdio(false);
+    cin.tie(0);
+    
     int mNum;
     int caseN = 1;
     int marbles[10000];
@@ -17,15 +21,14 @@ int main()
         cin >> t;
         
         if (mNum == 0 && t == 0)
-            return 0;
+        return 0;
         
         cout << "CASE# " << caseN++ << ":\n";
         
         for (int i = 0; i < mNum; i++) {
             cin >> marbles[i];
         }
-        
-        qsort(marbles, mNum, sizeof(int), compare);
+        sort(marbles, marbles + mNum, compare);
         
         while (t-- > 0) {
             int key;
